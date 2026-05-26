@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fashion AI Stylist</title>
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="background"></div>
+
+<div class="container">
+
+    <div class="hero">
+        <h1>✨ AI Fashion Stylist</h1>
+        <p>Your Personal Outfit Recommendation Assistant</p>
+    </div>
+
+    <div class="chat-container">
+
+        <div id="chat-box">
+
+            <div class="message bot">
+                👗 Hi! Tell me where you're going and I'll suggest an outfit.
+            </div>
+
+        </div>
+
+        <form id="chat-form">
+
+            <div class="input-group">
+                <input
+                    type="text"
+                    id="question"
+                    placeholder="Example: Suggest an outfit for a summer wedding..."
+                    required
+                >
+
+                <button type="submit">
+                    Generate
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
