@@ -28,9 +28,11 @@
 #print(response[0]["generated_text"])
 
 from flask import Flask, render_template, request, jsonify
-from transformers import T5Tokenizer, T5ForConditionalGeneration
+from transformers import T5Tokenizer, T5ForConditionalGeneration,AutoTokenizer
 import torch
 import os
+
+
 
 # =========================
 # Flask App Initialization
@@ -48,7 +50,7 @@ MODEL_PATH = "ishikagagneja46/outfit_recommendation_model"
 #MODEL_PATH = r"C:\Users\Ishika\Fashion Chatbot\fine_tuned_flan_t5_from_gen_data(5epoces)"
 
 print("Loading tokenizer...")
-tokenizer = T5Tokenizer.from_pretrained(MODEL_PATH)
+tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
 
 print("Loading model...")
 model = T5ForConditionalGeneration.from_pretrained(MODEL_PATH)
