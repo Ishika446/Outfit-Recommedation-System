@@ -6,3 +6,5 @@ sentencepiece
 safetensors
 accelerate
 huggingface_hub
+protobuf
+tiktoken
